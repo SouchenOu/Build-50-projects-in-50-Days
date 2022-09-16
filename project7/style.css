@@ -41,6 +41,35 @@ body {
 .pw button {
     position: absolute;
     bottom: 0;
-    left: 33%;
+    left: 23%;
+    width: 200px;
+    padding: 0.25rem 0.5rem;
     transform: translateX(-50%, 50%);
+    border: none;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+    opacity: 0;
+}
+
+.pw:hover button {
+    opacity: 1;
+}
+
+.form-control {
+    justify-content: space-between;
+    display: flex;
+    margin: 0.5rem 0;
+}
+
+.generate {
+    background-color: bisque;
+    display: block;
+    font-weight: bold;
+    padding: 0.5rem;
+    color: sienna;
+    font-size: 20px;
+    width: 100%;
+    font-weight: bold;
+    margin-top: 50px;
 }
