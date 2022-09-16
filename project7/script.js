@@ -1,6 +1,6 @@
 const pw = document.getElementById('pw')
 const copy = document.getElementById('copy')
-const length = document.getElementById('length')
+const Elen = document.getElementById('length')
 const upper = document.getElementById('upper')
 const lower = document.getElementById('lower')
 const number = document.getElementById('number')
@@ -33,13 +33,13 @@ function getSymbols() {
 }
 
 function generatePassword() {
-    const len = lenEl.value
-    let password = ''
+    const len = Elen.value
+    let password = "";
     for (let i = 0; i < len; i++) {
-        const x = generatX();
+        const x = generateX();
         password += x;
     }
-    pwEl.innerText = password
+    pw.innerText = password;
 }
 
 function generateX()
@@ -47,16 +47,16 @@ function generateX()
 {
     const xs = [];
     if (upper.checked) {
-        xs.push(getUpperCase())
+        xs.push(getUpperCase());
     }
-    if (upper.checked) {
-        xs.push(getLowerCase())
+    if (lower.checked) {
+        xs.push(getLowerCase());
     }
-    if (upper.checked) {
-        xs.push(getNumbersCase())
+    if (number.checked) {
+        xs.push(getNumbersCase());
     }
-    if (upper.checked) {
-        xs.push(getSymbolsCase())
+    if (symbol.checked) {
+        xs.push(getSymbolsCase());
     }
     return xs[Math.floor(Math.random() * xs.length)];
 }
