@@ -12,9 +12,15 @@
 <body>
     <div class="pw-container">
         <div class="pw-header">
-            <div class="pw"></div>
+            <div class="pw">
+                <button>Cpy to clipBoard</button>
+            </div>
         </div>
         <div class="pw_body">
+            <div class="form-control">
+                <label for="length">Password length</label>
+                <input id="length" type="number" min="4" max="40">
+            </div>
             <div class="form-control">
                 <label for="upper">Contains upperCare letters</label>
                 <input id="upper" type="checkbox">
@@ -33,10 +39,6 @@
             </div>
 
         </div>
-
-
-
-
     </div>
     <script src="script.js"></script>
 </body>
